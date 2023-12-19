@@ -1,25 +1,22 @@
 name: Update Submodules
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC时间0:00执行
+    - cron: "* * * * *"
+  workflow_dispatch:
 
 jobs:
-  update-submodules:
+  update_sdk:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Update Submodules
+      - name: Update submodules
         run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git submodule update --init --remote
           git config --global user.name "github-actions[bot]"
-          git submodule update --remote --merge
-          git add .
-          git commit -m "Update submodules"
-          git push
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update SDK" || exit 0
+          git push || exit 0          
+
