@@ -1,7 +1,6 @@
 [submodule "1.Firmware/Ecat_Firmware"]
 	path = 1.Firmware/Ecat_Firmware
 	url = https://github.com/evencewu/Ecat_Firmware.git
-
 [submodule "3.ROSpack/Ecat_ros2_pack"]
-	path = 3.Firmware/Ecat_ros2_pack
+	path = 3.ROSpack/Ecat_ros2_pack
 	url = https://github.com/evencewu/Ecat_ros2_pack.git
