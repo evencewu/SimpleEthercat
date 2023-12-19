@@ -4,3 +4,6 @@
 [submodule "3.ROSpack/Ecat_ros2_pack"]
 	path = 3.ROSpack/Ecat_ros2_pack
 	url = https://github.com/evencewu/Ecat_ros2_pack.git
+[submodule "2.hardware/Ecat_hardware"]
+	path = 2.hardware/Ecat_hardware
+	url = https://github.com/evencewu/Ecat_hardware.git
