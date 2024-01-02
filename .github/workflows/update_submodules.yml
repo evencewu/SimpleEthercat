@@ -12,10 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-        # Default: ${{ github.token }} ,传参给它更高权限的 token
-        token: evence 
-        # 把子模块打开
-        submodules: 'true'
+          # Default: ${{ github.token }} ,传参给它更高权限的 token
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          # 把子模块打开
+          submodules: 'true'
 
       - name: Update submodules
         run: |
