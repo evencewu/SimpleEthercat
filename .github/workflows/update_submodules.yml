@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           # Default: ${{ github.token }} ,传参给它更高权限的 token
-          token: ${{ secrets.PERSONAL_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           # 把子模块打开
           submodules: 'true'
 
