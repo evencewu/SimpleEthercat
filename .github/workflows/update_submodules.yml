@@ -19,6 +19,7 @@ jobs:
 
       - name: Update submodules
         run: |
+          export GOPRIVATE=github.com/SimpleEthercat/*  
           git submodule update --init --remote
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
