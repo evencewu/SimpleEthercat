@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        run: |
+          git config --global url."git@github.com:".insteadOf "https://github.com/"
         with:
           # Default: ${{ github.token }} ,传参给它更高权限的 token
           token: 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
