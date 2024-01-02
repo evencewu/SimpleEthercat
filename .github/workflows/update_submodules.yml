@@ -13,8 +13,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           # Default: ${{ github.token }} ,传参给它更高权限的 token
-          repository: evencewu/SimpleEthercat
-          token: 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
+          token: ${{ secrets.evence }}
           # 把子模块打开
           submodules: 'true'
 
