@@ -11,12 +11,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        # with:
+        with:
           # Default: ${{ github.token }} ,传参给它更高权限的 token
           # ref: ${{ github.event.head_commit.oid }} 
-          # token: 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
+          token: ${{ secrets.evence }} 
           # 把子模块打开
-          # submodules: 'true'
+          submodules: 'true'
 
       - name: Update submodules
         run: |
