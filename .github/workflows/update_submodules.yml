@@ -15,7 +15,7 @@ jobs:
           # Default: ${{ github.token }} ,传参给它更高权限的 token
           token: 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
           # 把子模块打开
-          # submodules: 'true'
+          submodules: 'true'
 
       - name: Update submodules
         run: |
