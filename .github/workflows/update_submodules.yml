@@ -14,7 +14,7 @@ jobs:
         with:
           # Default: ${{ github.token }} ,传参给它更高权限的 token
           # ref: ${{ github.event.head_commit.oid }} 
-          token: ${{ secrets.evence }} 
+          token: ${{ secrets.TOKEN_MASTER }} 
           # 把子模块打开
           submodules: 'true'
 
